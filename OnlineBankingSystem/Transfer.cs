@@ -22,6 +22,7 @@ namespace OnlineBankingSystem
                     Amount = Convert.ToDouble(Console.ReadLine());
                     if (Amount <= account.Balance[i]) 
                     {
+                        account.Balance[i] = account.Balance[i] - Amount;
                         Console.WriteLine("-------------------------");
                         Console.WriteLine("Enter The Reciver Number");
                         int recieverNo = Convert.ToInt32(Console.ReadLine());

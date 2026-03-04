@@ -5,7 +5,7 @@ namespace ATM
 {
     public class Options
     {
-        
+        protected double balance = 0;
         public virtual void DisPlayOptions()
         {
             
@@ -39,7 +39,7 @@ namespace ATM
             {
                 Console.WriteLine($"\nYour Current Balance: {balance} EGP\n\nThe maximum withdrawal amount is 5000 EGP and the minimum amount is 50 EGP");
                 double amount = double.Parse(Console.ReadLine());
-                if (amount >=5000 && amount<50)
+                if (amount > 5000 || amount < 50)
                 {
                     Console.WriteLine("Please Enter Correct Amount");
                    

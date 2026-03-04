@@ -21,18 +21,16 @@ namespace ATM
             string pin = Console.ReadLine();
             if (pin.Length == 4)
             {
-                for (int i = 0; i<Pin.Length; i++)
+                for (int i = 0; i < Pin.Length; i++)
                 {
                     if (Pin[i] == pin)
                     {
                         SelectLanguage();
                         DisPlayOptions();
-                    }
-                    else 
-                    {
-                        break;
+                        return;
                     }
                 }
+                Console.WriteLine("Invalid PIN. Please try again.");
                 
             }
             else

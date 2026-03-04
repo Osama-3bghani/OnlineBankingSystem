@@ -42,7 +42,7 @@ namespace OnlineBankingSystem
                 {
                     Console.WriteLine($"\nYour Current Balance: {account.Balance[i]} EGP\n\nThe maximum withdrawal amount is 5000 EGP and the minimum amount is 50 EGP");
                     double amount = double.Parse(Console.ReadLine());
-                    if (amount >= 5000 && amount < 50 && amount > account.Balance[i])
+                    if (amount > 5000 || amount < 50 || amount > account.Balance[i])
                     {
                         Console.WriteLine("Please Enter Correct Amount");
 
